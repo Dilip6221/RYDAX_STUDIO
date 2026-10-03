@@ -1,0 +1,600 @@
+/* =================START: ADMIN SIDE JOB MEDIA SECTION UI ================= */
+
+.job-media-card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #2c2c2c;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-media-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.media-wrapper {
+    position: relative;
+    height: 180px;
+    background: #000;
+}
+
+.media-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.stage-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 193, 7, 0.95);
+    color: #000;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.media-footer {
+    padding: 10px;
+    background: #141414;
+}
+
+/* =================END: ADMIN SIDE JOB MEDIA SECTION UI ================= */
+
+.admin-logo {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.admin-logo:hover {
+    transform: scale(1.03);
+}
+
+/* NOTE */
+.timeline-note {
+    font-size: 12px;
+    color: #b5b5b5;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+
+/* MEDIA */
+.media-card {
+    background: #000;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.media-card img,
+.media-card video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.media-card:hover {
+    transform: scale(1.05);
+}
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #111;
+    margin-left: 10px;
+    border-left: 2px solid var(--primary);
+}
+.nav-item.open .submenu {
+    max-height: 500px;
+}
+.submenu .dropdown-item {
+    padding: 8px 20px 8px 35px;
+    font-size: 14px;
+    color: var(--light);
+    display: block;
+}
+
+.submenu .dropdown-item:hover {
+    color: var(--primary);
+}
+.submenu-toggle {
+    cursor: pointer;
+}
+.submenu-toggle i.fa-angle-down {
+    transition: 0.3s;
+}
+
+.nav-item.open .fa-angle-down {
+    transform: rotate(360deg);
+}
+
+
+.filter-box {
+  margin-bottom: 15px;
+}
+
+.filter-box select {
+  padding: 8px;
+  background: #111;
+  border: 1px solid #222;
+  color: #fff;
+  border-radius: 6px;
+}
+/* TIMELINE */
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* CENTER LINE */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: rgba(255,255,255,0.1);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ITEM */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 30px;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-content {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+/* TEXT */
+.year {
+  color: #cfa144;
+}
+
+
+.timeline-item.right .timeline-plus {
+  left: -16px;
+  right: auto;
+}
+
+
+.timeline-item.left .timeline-images-horizontal {
+  right: -340px;
+}
+.timeline-item.right .timeline-images-horizontal {
+  left: -340px;
+}
+
+
+.timeline-images-horizontal::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+/* MOBILE TIMELINE */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 24px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 15px 10px 15px 55px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-content {
+    padding: 14px 16px;
+  }
+
+  .timeline-images-horizontal {
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline::after {
+    left: 18px;
+  }
+
+  .timeline-item {
+    padding: 12px 0 12px 42px;
+  }
+
+  .timeline-content {
+    padding: 12px 14px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE ADMIN PLATFORM (MOBILE, TABLET & DESKTOP)
+   ========================================================================== */
+
+/* 1. Backdrop Overlay for Mobile Drawer */
+.admin-sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1040;
+  cursor: pointer;
+  animation: adminFadeIn 0.25s ease forwards;
+}
+
+@keyframes adminFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 2. Top Navbar Toggler Styling */
+.sidebar-toggler {
+  width: 40px !important;
+  height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.sidebar-toggler:hover,
+.sidebar-toggler:focus {
+  background: rgba(235, 22, 22, 0.2) !important;
+  border-color: rgba(235, 22, 22, 0.4) !important;
+  transform: scale(1.05);
+}
+
+/* 3. Universal Mobile Table Containers */
+.admin-content .table-responsive,
+.admin-content div[style*="maxHeight"],
+.admin-content div[style*="max-height"],
+.admin-content div[style*="overflowY"],
+.admin-content div[style*="overflow-y"] {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Ensure table columns don't crush into unreadable ribbons on phones */
+.admin-content table {
+  min-width: 680px;
+}
+
+/* Custom Sleek Scrollbar for Admin Tables */
+.admin-content div[style*="overflow"]::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.admin-content div[style*="overflow"]::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.admin-content div[style*="overflow"]::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+}
+
+.admin-content div[style*="overflow"]::-webkit-scrollbar-thumb:hover {
+  background: rgba(235, 22, 22, 0.7);
+}
+
+/* 4. Large Tablets & Desktop (>= 992px) */
+@media (min-width: 992px) {
+  .admin-layout .admin-sidebar {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    width: 250px !important;
+    min-width: 250px !important;
+    visibility: visible !important;
+    transform: none !important;
+    opacity: 1 !important;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                min-width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.2s ease !important;
+  }
+
+  .admin-layout .admin-sidebar.sidebar-collapsed {
+    width: 0 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    border-right: none !important;
+  }
+
+  .admin-layout .admin-sidebar.sidebar-collapsed .navbar {
+    display: none !important;
+  }
+
+  .admin-layout .admin-content {
+    flex: 1;
+    width: calc(100% - 250px);
+    min-width: 0;
+    transition: width 0.3s ease;
+  }
+
+  .admin-layout .admin-sidebar.sidebar-collapsed + .admin-content {
+    width: 100% !important;
+  }
+}
+
+/* 5. Mobile & Tablets (< 992px) - Offcanvas Drawer */
+@media (max-width: 991.98px) {
+  .admin-layout .admin-sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 280px !important;
+    max-width: 82vw !important;
+    min-width: 0 !important;
+    height: 100vh !important;
+    z-index: 1050 !important;
+    background-color: #12141a !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: none;
+    transform: translateX(-100%) !important;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow-y: auto !important;
+    visibility: hidden;
+  }
+
+  .admin-layout .admin-sidebar.sidebar-open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    box-shadow: 12px 0 35px rgba(0, 0, 0, 0.85) !important;
+  }
+
+  .admin-layout .admin-sidebar.sidebar-collapsed {
+    transform: translateX(-100%) !important;
+    visibility: hidden !important;
+    width: 280px !important;
+  }
+
+  .admin-layout .admin-content {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .admin-content > .p-4 {
+    padding: 1rem !important;
+  }
+
+  /* Responsive Top Navbar */
+  .admin-content .navbar.sticky-top {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    height: 56px;
+  }
+}
+
+/* 6. Mobile Devices (< 768px) - High Priority Usability Adjustments */
+@media (max-width: 767.98px) {
+  /* Page Outer Spacing */
+  .admin-content > .p-4 {
+    padding: 0.65rem !important;
+  }
+
+  .container-fluid {
+    padding-left: 0.35rem !important;
+    padding-right: 0.35rem !important;
+  }
+
+  /* Card Containers */
+  .bg-dark.rounded.p-4 {
+    padding: 0.9rem !important;
+    border-radius: 10px !important;
+  }
+
+  /* Section Title & Header Stacking */
+  .section-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .bg-dark h4.d-flex.justify-content-between,
+  .d-flex.justify-content-between.align-items-center.mb-4,
+  .d-flex.justify-content-between.align-items-center.mb-3 {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  /* Top Right Action Controls (Search + Create Button) */
+  .bg-dark h4 .d-flex.align-items-center.gap-3,
+  .d-flex.justify-content-between.align-items-center > .d-flex.gap-2,
+  .d-flex.justify-content-between.align-items-center > .d-flex.gap-3 {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: stretch !important;
+  }
+
+  .bg-dark h4 .input-group,
+  .bg-dark h4 input[type="search"] {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 4px !important;
+  }
+
+  .bg-dark h4 .d-flex.align-items-center.gap-3 button,
+  .bg-dark h4 .d-flex.align-items-center.gap-3 a,
+  .d-flex.justify-content-between.align-items-center > .d-flex.gap-2 button,
+  .d-flex.justify-content-between.align-items-center > .d-flex.gap-2 a {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Navigation Pills (Filter Tabs in Users, Inquiries, etc.) */
+  .nav-pills {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 6px !important;
+    padding-bottom: 4px !important;
+  }
+
+  .nav-pills .nav-item {
+    flex: 0 0 auto !important;
+  }
+
+  .nav-pills .nav-link {
+    padding: 6px 14px !important;
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* Form Fields & Touch-Friendly Sizing */
+  .form-control,
+  .form-select {
+    font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+    min-height: 42px !important;
+  }
+
+  /* Modals on Mobile */
+  .modal-dialog {
+    margin: 0.5rem auto !important;
+    max-width: 96vw !important;
+    width: 96vw !important;
+  }
+
+  .modal-content {
+    border-radius: 12px !important;
+  }
+
+  /* Job Media Grid on Small Screens */
+  .job-media-card {
+    margin-bottom: 12px;
+  }
+
+  /* Dashboard Stats Cards */
+  .row.g-4 {
+    --bs-gutter-y: 0.75rem !important;
+    --bs-gutter-x: 0.75rem !important;
+  }
+
+  .col-sm-6.col-xl-3 {
+    width: 100% !important;
+  }
+
+  .bg-dark.rounded.p-4.shadow-sm {
+    padding: 1rem !important;
+  }
+}
+
+/* 7. Extra Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .admin-content .navbar.sticky-top {
+    padding: 0 8px !important;
+  }
+
+  .admin-content .navbar .dropdown-toggle {
+    font-size: 0.85rem !important;
+  }
+
+  .badge {
+    font-size: 0.75rem !important;
+  }
+
+  /* Form Buttons Stack on Tiny Devices */
+  .col-12 button,
+  form button[type="submit"] {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   OUR TEAM / USER MANAGEMENT RESPONSIVE STYLES
+   ========================================================================== */
+@media (max-width: 575.98px) {
+  /* On very small phones, make top filter bar and action button stack cleanly */
+  .bg-dark.rounded.p-3.mb-3 .d-flex.flex-wrap {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .bg-dark.rounded.p-3.mb-3 .nav-pills {
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+  
+  .bg-dark.rounded.p-3.mb-3 button.btn-outline-danger {
+    width: 100% !important;
+    margin-top: 4px !important;
+  }
+}
+
+/* ==========================================================================
+   DASHBOARD STAT CARDS & RESPONSIVE WIDGETS
+   ========================================================================== */
+.admin-stat-card {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.admin-stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(220, 53, 69, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+.admin-stat-card:active {
+  transform: scale(0.98);
+}
+.hover-underline:hover {
+  text-decoration: underline;
+}
+

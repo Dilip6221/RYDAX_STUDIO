@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /profile
+Disallow: /my-car-vault
+Disallow: /login
+Disallow: /forget-password
+
+# Set VITE_SITE_URL and publish a generated sitemap.xml for the production domain.
